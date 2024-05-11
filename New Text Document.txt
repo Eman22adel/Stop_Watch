@@ -1,0 +1,40 @@
+/* task sensor ((((((((((LDR)))))))) wit 8 led */
+      x = ADC_Read(CH_0);
+	LCD_SetCursor(0,0);
+	LCD_WriteNumber(x);
+	LCD_WriteString("     ");
+	if(x <= 230){DIO_WritePort(PB,0xff);}
+	else if (x <= 300){DIO_WritePort(PB,0x7f);}
+	else if (x <= 350){DIO_WritePort(PB,0x3f);}
+	else if (x <= 400){DIO_WritePort(PB,0x1f);}
+	else if (x <= 420){DIO_WritePort(PB,0x0f);}
+	else if (x <= 440){DIO_WritePort(PB,0x07);}
+	else if (x <= 600){DIO_WritePort(PB,0x03);}
+	else {DIO_WritePort(PB,0x00);}
+
+/* task ((((((((((POT)))))))) with SOUND VOLUME */
+      LCD_SetCursor(0,0);
+	x = POT_Read();
+	for (u8 i =0; i < (x*16)/100;i++)
+	{	
+	     LCD_WriteChar(o);	
+	}
+	LCD_WriteString("        ");
+	LCD_SetCursor(1,0);
+	LCD_WriteNumber(x);
+	LCD_WriteChar('%');
+	LCD_WriteString("     ");
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+		
