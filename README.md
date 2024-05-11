@@ -18,3 +18,5 @@ Make sure the stopwatch time does not exceed 99 minutes.
 
 ## Reset Function
 In operation mode, if you press the "Start" button again, it will reset the counter to start over.
+
+[!Proteus](https://github.com/Eman22adel/Stop_Watch/blob/main/Screenshot%202024-05-11%20181554.png)
